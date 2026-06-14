@@ -2,9 +2,9 @@ import type { SiteConfig } from "@/types";
 import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 
 export const siteConfig: SiteConfig = {
-	author: "Your Name",
+	author: "Srikar Rao H M",
 	date: {
-		locale: "en-US",
+		locale: "en-IN",
 		options: {
 			day: "numeric",
 			month: "short",
@@ -12,23 +12,18 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	description:
-		"A minimal personal blog & writing space, built with Astro. Notes on whatever I happen to be thinking about — usually some mix of code, design, and the occasional half-formed idea. Replace this paragraph in src/site.config.ts to make the site your own.",
+		"A personal blog where I talk about tech, computers and anything in that sphere",
 	lang: "en-US",
 	ogLocale: "en_US",
 	sortPostsByUpdatedDate: false,
-	title: "Astro Sienna",
+	title: "Srikar's Blog",
 	hideThemeCredit: false,
 	profile: {
-		name: "John Doe",
-		email: "john@example.com",
-		github: "https://github.com/example",
-		linkedin: "https://www.linkedin.com/in/example/",
-		jobTitle: "Software Engineer",
-		employer: "Example Inc.",
-		employerUrl: "https://example.com",
-		alumni: "Example University",
-		avatar: "/avatar.png",
-	},
+		name: "Srikar Rao H M",
+		email: "srikar0811@gmail.com",
+		github: "https://github.com/Mystery-Coder",
+		linkedin: "https://www.linkedin.com/in/srikar-rao-57a60732a",
+		},
 	// Uncomment & fill in to enable Giscus comments on every post.
 	// comments: {
 	// 	repo: "your-handle/your-repo",
