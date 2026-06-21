@@ -11,8 +11,7 @@ export const siteConfig: SiteConfig = {
 			year: "numeric",
 		},
 	},
-	description:
-		"A personal blog where I talk about tech, computers and anything in that sphere",
+	description: "A personal blog where I talk about tech, computers and anything in that sphere",
 	lang: "en-US",
 	ogLocale: "en_US",
 	sortPostsByUpdatedDate: false,
@@ -23,7 +22,7 @@ export const siteConfig: SiteConfig = {
 		email: "srikar0811@gmail.com",
 		github: "https://github.com/Mystery-Coder",
 		linkedin: "https://www.linkedin.com/in/srikar-rao-57a60732a",
-		},
+	},
 	// Uncomment & fill in to enable Giscus comments on every post.
 	// comments: {
 	// 	repo: "your-handle/your-repo",
@@ -32,10 +31,9 @@ export const siteConfig: SiteConfig = {
 	// 	categoryId: "...",
 	// },
 	// Uncomment to enable analytics. Both providers load via Partytown.
-	// analytics: {
-	// 	googleAnalyticsId: "G-XXXXXXX",
-	// 	goatcounterUrl: "https://your-handle.goatcounter.com/count",
-	// },
+	analytics: {
+		goatcounterUrl: "https://srikar.goatcounter.com/count",
+	},
 };
 
 export const menuLinks: { path: string; title: string }[] = [
