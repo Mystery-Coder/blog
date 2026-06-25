@@ -3,11 +3,10 @@ title: "The State of LLMs"
 publishDate: 2026-06-25
 description: "A post on my thoughts about the current LLM landscape"
 tags: ["ai", "llm", "agents"]
-draft: true
 ---
 
 The LLMs are EVERYWHRE on the internet. People
-use it for writing homework, documentation, some companies use it for charging a lot to write reports
+use it for writing homework, documentation, programming(I do too, it's a useful tool), some companies use it for charging a lot to write reports
 like [Delloite](https://fortune.com/2025/10/07/deloitte-ai-australia-government-report-hallucinations-technology-290000-refund/) (6 months ago) provided a report with AI hallucinations to the Australian Government
 and [KPMG](https://finance.yahoo.com/sectors/technology/articles/kpmg-drops-ai-report-false-093631620.html) pulled a report because of hallucinations in it.
 This post is about how AI/LLMs are growing across the internet.
@@ -27,7 +26,7 @@ from the internet may be running out, a lot of synthetic data is being used now 
 
 ## Internet Traffic
 
-Matthew Prince, CEO of Cloudflare on June 03 2026, tweeted [Bot Traffic](https://x.com/eastdakota/status/2062212701414187452), he says due to agentic systems,
+Matthew Prince, CEO of Cloudflare on June 03 2026, tweeted that [Bot Traffic](https://x.com/eastdakota/status/2062212701414187452), he says due to agentic systems,
 for the first time in history had exceeded human traffic
 
 [![Cloudflare Radar](image.png)](https://radar.cloudflare.com/traffic?dateStart=2026-06-03&dateEnd=2026-06-10)
@@ -48,7 +47,7 @@ complete pay for every token on API rates system, which can dramatically increas
 - [Fortune](https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/) - Uber spent their ENTIRE YEAR'S AI Budget in 4 MONTHS, when I read this I just could not
   comprehend how that can happen, what were they even doing, the Uber app has not changed in any significant measure.
 - [Yahoo Finance](https://finance.yahoo.com/sectors/technology/articles/amazon-says-shut-down-token-161016125.html) - Amazon shutdown their Internal AI leaderboard after the developers simply did as they were told to, "use more AI".
-- [Meta's Leaderboard](https://x.com/Polymarket/status/2041932251080872303) - Meta also seemingly had a situation where due to gamified nature of thier leaderboard, Claudeonomics,
+- [Polymarket](https://x.com/Polymarket/status/2041932251080872303) - Meta also seemingly had a situation where due to gamified nature of thier leaderboard, Claudeonomics,
   led to more usage.
 
 Also, [Github Copilot](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) switched to token based billing on June 1st, meaning when you
@@ -60,10 +59,23 @@ Here, I want to talk about 2 incidents that I came across,
 
 - [OpenAI](https://openai.com/index/where-the-goblins-came-from/) made a post on the goblins and where they came from. Many users started reported that the GPT models would
   respond with lot of references to goblins, gremlins, other creatures, etc. This was funny, it would talk about goblins in conversations that were so far from them. They traced
-  the issue back to GPT-5.1 training process where they had some reward for a "nerdy" personailty, from what I understand it's like overfitting for the reward but the solution to curb the goblins in the mean time was hilarious, in OpenAI Codex the had a system message stating not to talk about goblins, gremlins, etc.
-  [Someone found this in OpenAI Codex’s system prompt:](https://news.ycombinator.com/item?id=47944637)
+  the issue back to GPT-5.1 training process where they had some reward for a "nerdy" personailty, from what I understand it's like overfitting for the reward but the solution to curb the goblins in the mean time was hilarious, in OpenAI Codex the had a system message stating not to talk about goblins, gremlins, etc to fix the issue. (like the best engineers in the world and they had to solve it like this)
+
+  > [Codex Git Commit](https://github.com/openai/codex/blob/de2ccf94735a3d8a2a7077e6a5292026413867cf/codex-rs/models-manager/models.json#L55)
   > "Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user’s query."
 
-## Open Source/Weight Models
+- [Anthropic](https://fortune.com/2026/05/14/why-is-claude-telling-users-to-go-to-sleep-anthropic-ai-sentient/) also had many reports from users who said Claude started saying it's to sleep or get some rest. They could not even figure out the issue!(I have a conspiracy thoery)
+
+To me both these problems highlight the fact that NO ONE knows how these models behave, completely unpredictable, how can we use these tools at this unsustainable pace that
+is being pushed by the AI Labs and trust them when they aren't sure on how to solve such problems.
 
 ## Anthropic Situation
+
+Now, for the latest news, on April 7 2026, [Anthropic](https://www.anthropic.com/research/mythos-preview) announced Mythos Preview, a new class of ther models and said in their
+post that it had the best cybersecurity capabilities ever in LLMs. They had evidence to back it up too, Mythos Preview found many CVEs (Common Vulnerabilities and Exposures) in
+many important software projects like OpenBSD, the Linux kernel, etc. Then on June 9 2026, [They](https://www.anthropic.com/news/claude-fable-5-mythos-5) released Mythos 5
+and Fable 5. Fable 5 was a safe version of Mythos 5 which would not assist with any cybersecurity or advanced biology prompts and would fallback to a different model but on
+June 12 2026, the US Government declared Mythos/Fable 5 a national security threat, we don't really know what made them take this decision, reports say Amazon broke the guardrails on Fable 5 and
+reported it. All this feels like a lot of marketing hype, I feel this way due to [Aisle](https://aisle.com/about-us) they are an AI
+cybersecurity company, they tested Anthropic's claims against many different models and found all the same problems, they mention that they don't chase hype and they have the credentials to back this up. Most recently, [Aisle](https://aisle.com/blog/aisle-discovers-6-new-cves-in-curl-including-the-oldest-issue-ever-reported) found 6 CVEs in the cURL project, affecting mainly libcurl applications not the command line tool.
+This is opposed to just 1 found by [Mythos](https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/), that's crazy, for all the hype Antropic are getting, for AI in cybersecurity seems like the model might not be the most important component.
