@@ -1,6 +1,6 @@
 ---
 title: "The State of LLMs"
-publishDate: 2026-06-21
+publishDate: 2026-06-25
 description: "A post on my thoughts about the current LLM landscape"
 tags: ["ai", "llm", "agents"]
 draft: true
@@ -18,7 +18,7 @@ The usage of AI (mostly LLMs) has grown at a pace never experienced on the inter
 
 > **Side Note:**
 > Until Meta's Threads App came along, ChatGPT held the record of gaining 100 million Monthly Active Users the fastest, reaching it in 2 months after launch (Threads did it in 5 days). To put this in context, Tiktok took 9 months to reach 100 million and Netflix took 10 YEARS to do the same, granted they started at the very beginbing of the Internet.
-> The point of this note is to show that LLM usage is not tied only to programming, which is becomming the main focus right now, even before anyone thought to generate code from an LLM, usage had blown up.
+> The point of this note is to show that LLM usage is not tied only to programming, which is becoming the main focus right now, even before anyone thought to generate code from an LLM, usage had blown up.
 
 ## The Data Problem
 
@@ -32,13 +32,12 @@ for the first time in history had exceeded human traffic
 
 [![Cloudflare Radar](image.png)](https://radar.cloudflare.com/traffic?dateStart=2026-06-03&dateEnd=2026-06-10)
 
-Even GitHub has had problems dealing with this exponential growth in traffic, stated in April, [Github Blog](https://github.blog/news-insights/company-news/an-update-on-github-availability/). They have had multiple hour long incidents since then. Accross the web, many services have had to implement stricter rate limiting to counter this increase in AI bot crawling. GitHub are reported to be rebuilding all their infrastructure to handle this new era of coding agents.
+Even GitHub has had problems dealing with this exponential growth in traffic, stated in April, [Github Blog](https://github.blog/news-insights/company-news/an-update-on-github-availability/). They have had multiple hour long incidents since then. Accross the web, many services have had to implement stricter rate limiting to counter this increase in AI bot crawling. GitHub are reported to be rebuilding all their infrastructure to handle this new era of coding agents. Like [Shadertoy](https://www.shadertoy.com/howto), a site to share GLSL Shaders, their API was down for quite some time and when it went back up, they added rules that only those who have used the platform for some time and have used the platoform positively with strict rate limits due to the voume of requests.
 
 ## Cost of LLMs
 
 The price of LLM API based token billing have decreased very much since they launched, as stated by [Epoch AI](https://epoch.ai/data-insights/llm-inference-price-trends) but
-with the advent of AI Coding Agents like Cursor, Claude Code, the usage just exploded so much. Individuals can use the subscription models which are soo subsidized by providers,
-like the Claude Max \$200 per month subscription can give upto \$8000 of usage (billed on API rates), same goes for the ChatGPT Pro 20x sub which is shown to give \$10,000+ usage.
+with the advent of AI Coding Agents like Cursor, Claude Code, the usage just exploded so much. Individuals can use the subscription models which are extremely subsidized by providers, like the Claude Max \$200 per month subscription can give upto \$8000 of usage (billed on API rates), same goes for the ChatGPT Pro 20x sub which is shown to give \$10,000+ usage.
 These prices are insane and you will understand why when you think about what an LLM API call actually does. When you call an LLM API, actual GPUs have to take your prompt, tokenize it, run it through attention blocks, do many matrix multiplication depending on model size, etc, all of these have real costs associated and imagine all this done for all the tool calls, it's not predictable at all but everybody seems to just believe the cost will keep getting lower. There are cost controlling techniques applied like Prompt Caching, which uses cryptographic proof to check if prompt input prefixes are unmodified and loads the precomputed KV caches into GPUs, and these cached input tokens are generally billed around one tenth the cost of normal input tokens but the cache-hit rate varies a lot by provider from what I have read.
 
 ## Bad Budget Managment
@@ -53,9 +52,17 @@ complete pay for every token on API rates system, which can dramatically increas
   led to more usage.
 
 Also, [Github Copilot](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) switched to token based billing on June 1st, meaning when you
-buy a \$20 a month Copilot subscription, you would get \$20 worth of API billing based usage, which doesn't really make sense why wouldn't you just get them directly from the provider? And there's OpenRouter as well, doesn't that provide a lot more value? It's not the most sense for capturing market share in an AI Tools loving economy but makes definitely more sense economically, clearly this was long time coming, they had already removed premium models like Opus, Sonnet, GPT-5.3-Codex from the [Copilot Student Plan](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) because they cost a lot, and were disproportionately the most used models. They had also stopped new signups in April, [Github Blog](https://github.blog/changelog/2026-04-20-changes-to-github-copilot-plans-for-individuals/)
+buy a \$20 a month Copilot subscription, you would get \$20 worth of API billing based usage, which doesn't really make sense why wouldn't you just get them directly from the provider? And there's OpenRouter as well, doesn't that provide a lot more value? It's not the most sense for capturing market share in an AI Tools loving economy but makes definitely more sense considering their finances, clearly this was long time coming, they had already removed premium models like Opus, Sonnet, GPT-5.3-Codex from the [Copilot Student Plan](https://github.com/orgs/community/discussions/189268) because they cost a lot, and were disproportionately the most used models. They had also stopped new signups in April, [Github Blog](https://github.blog/changelog/2026-04-20-changes-to-github-copilot-plans-for-individuals/#new-signups-paused-for-pro-pro-and-student)
 
 ## The Black Box Issue
+
+Here, I want to talk about 2 incidents that I came across,
+
+- [OpenAI](https://openai.com/index/where-the-goblins-came-from/) made a post on the goblins and where they came from. Many users started reported that the GPT models would
+  respond with lot of references to goblins, gremlins, other creatures, etc. This was funny, it would talk about goblins in conversations that were so far from them. They traced
+  the issue back to GPT-5.1 training process where they had some reward for a "nerdy" personailty, from what I understand it's like overfitting for the reward but the solution to curb the goblins in the mean time was hilarious, in OpenAI Codex the had a system message stating not to talk about goblins, gremlins, etc.
+  [Someone found this in OpenAI Codex’s system prompt:](https://news.ycombinator.com/item?id=47944637)
+  > "Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user’s query."
 
 ## Open Source/Weight Models
 
