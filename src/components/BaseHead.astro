@@ -94,16 +94,8 @@ const goatcounter = analytics?.goatcounterUrl;
 
 <meta content={Astro.generator} name="generator" />
 
-<!-- Override the path in goatcounter as partytown runs it in isolated Web Worker -->
 {
 	goatcounter && (
-		<script
-			is:inline
-			type="text/partytown"
-			data-goatcounter={goatcounter}
-			data-goatcounter-settings='{"path": "location.pathname"}'
-			async
-			src="//gc.zgo.at/count.js"
-		></script>
+		<script is:inline data-goatcounter={goatcounter} async src="//gc.zgo.at/count.js" />
 	)
 }
