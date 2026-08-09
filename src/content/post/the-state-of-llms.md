@@ -1,6 +1,7 @@
 ---
 title: "The State of LLMs"
 publishDate: 2026-06-25
+updatedDate: "2026-09-26"
 description: "A post on my thoughts about the current LLM landscape"
 tags: ["ai", "llm", "agents"]
 ---
@@ -49,6 +50,7 @@ complete pay for every token on API rates system, which can dramatically increas
 - [Yahoo Finance](https://finance.yahoo.com/sectors/technology/articles/amazon-says-shut-down-token-161016125.html) - Amazon shutdown their Internal AI leaderboard after the developers simply did as they were told to, "use more AI".
 - [Polymarket](https://x.com/Polymarket/status/2041932251080872303) - Meta also seemingly had a situation where due to gamified nature of thier leaderboard, Claudeonomics,
   led to more usage.
+- [Microsoft](https://timesofindia.indiatimes.com/technology/tech-news/after-telling-employees-to-stop-using-claude-code-microsofts-internal-memo-has-more-bad-news-for-anthropic/articleshow/132980368.cms) - Removed Claude models as default for Copilot internally and introduced budget ceiling for all divisions in July.
 
 Also, [Github Copilot](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) switched to token based billing on June 1st, meaning when you
 buy a \$20 a month Copilot subscription, you would get \$20 worth of API billing based usage, which doesn't really make sense why wouldn't you just get them directly from the provider? And there's OpenRouter as well, doesn't that provide a lot more value? It's not the most sense for capturing market share in an AI Tools loving economy but makes definitely more sense considering their finances, clearly this was long time coming, they had already removed premium models like Opus, Sonnet, GPT-5.3-Codex from the [Copilot Student Plan](https://github.com/orgs/community/discussions/189268) because they cost a lot, and were disproportionately the most used models. They had also stopped new signups in April, [Github Blog](https://github.blog/changelog/2026-04-20-changes-to-github-copilot-plans-for-individuals/#new-signups-paused-for-pro-pro-and-student)
