@@ -1,7 +1,7 @@
 ---
 title: "The State of LLMs"
 publishDate: 2026-06-25
-updatedDate: "2026-10-18"
+updatedDate: "2026-11-17"
 description: "A post on my thoughts about the current LLM landscape"
 tags: ["ai", "llm", "agents"]
 ---
@@ -70,7 +70,7 @@ Here, I want to talk about 2 incidents that I came across,
 
 - [Anthropic](https://fortune.com/2026/05/14/why-is-claude-telling-users-to-go-to-sleep-anthropic-ai-sentient/) also had many reports from users who said Claude started saying it's to sleep or get some rest. They could not even figure out the issue!(I have a conspiracy thoery)
 
-To me both these problems highlight the fact that NO ONE knows how these models behave, completely unpredictable, how can we use these tools at this unsustainable pace that
+To me both these problems highlight the fact that no one knows how these models behave (meaning that LLMs are not as explainable or interpretable as previous AI/ML models), completely unpredictable, how can we use these tools at this unsustainable pace that
 is being pushed by the AI Labs and trust them when they aren't sure on how to solve such problems.
 
 ## Anthropic Situation
